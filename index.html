@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — M.A.G.P.</title>
+<style>
+  :root {
+    --bg: #F7F8FA;
+    --surface: #FFFFFF;
+    --surface-2: #EEF1F5;
+    --text: #1B2430;
+    --text-muted: #5B6779;
+    --border: #DFE4EA;
+    --accent: #2452C8;
+    --accent-soft: #E8EEFC;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F172A;
+      --surface: #182234;
+      --surface-2: #1F2B40;
+      --text: #E7ECF3;
+      --text-muted: #9AA7BC;
+      --border: #2B394F;
+      --accent: #6C93F5;
+      --accent-soft: #22304B;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0F172A;
+    --surface: #182234;
+    --surface-2: #1F2B40;
+    --text: #E7ECF3;
+    --text-muted: #9AA7BC;
+    --border: #2B394F;
+    --accent: #6C93F5;
+    --accent-soft: #22304B;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 48px 64px;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .marca-sello {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .marca-nombre {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: var(--text);
+  }
+
+  header.encabezado {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+
+  .etiqueta {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 5px 11px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+
+  .subtitulo {
+    color: var(--text-muted);
+    font-size: 15px;
+    max-width: 60ch;
+  }
+
+  .meta-fecha {
+    color: var(--text-muted);
+    font-size: 13.5px;
+    margin-top: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  section.bloque {
+    margin-bottom: 34px;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text);
+    margin: 0 0 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .num {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 2px 7px;
+    flex-shrink: 0;
+  }
+
+  p {
+    margin: 0 0 12px;
+    max-width: 66ch;
+    color: var(--text);
+  }
+
+  p.muted { color: var(--text-muted); }
+
+  ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+    max-width: 62ch;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  .tarjeta {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+
+  .cuadricula-hechos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 18px 0 8px;
+  }
+
+  .hecho {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+
+  .hecho .titulo-hecho {
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .hecho .texto-hecho {
+    font-size: 14.5px;
+    color: var(--text);
+  }
+
+  .no-lista li::marker { color: var(--accent); }
+
+  footer.pie {
+    border-top: 1px solid var(--border);
+    margin-top: 44px;
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 13.5px;
+  }
+
+  a { color: var(--accent); }
+
+  img { max-width: 100%; }
+
+  @media (max-width: 480px) {
+    body { padding-inline: 16px; }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap">
+</head>
+<body>
+
+<div class="page">
+  <div class="marca">
+    <div class="marca-sello">M</div>
+    <div class="marca-nombre">M.A.G.P.</div>
+  </div>
+
+  <header class="encabezado">
+    <span class="etiqueta">Política de Privacidad</span>
+    <h1>Cómo maneja tus datos M.A.G.P.</h1>
+    <p class="subtitulo">Manejo Autónomo de Gastos Personales — aplicación de escritorio y móvil desarrollada por Miguel Angel Gutiérrez Vasquez.</p>
+    <p class="meta-fecha">Última actualización: 18 de septiembre de 2026</p>
+  </header>
+
+  <div class="cuadricula-hechos">
+    <div class="hecho">
+      <div class="titulo-hecho">Dónde vive tu información</div>
+      <div class="texto-hecho">Únicamente en tu propio dispositivo — nunca en un servidor.</div>
+    </div>
+    <div class="hecho">
+      <div class="titulo-hecho">Cómo se guarda</div>
+      <div class="texto-hecho">Cifrada con SQLCipher, en una carpeta oculta del sistema.</div>
+    </div>
+    <div class="hecho">
+      <div class="titulo-hecho">Qué recibimos nosotros</div>
+      <div class="texto-hecho">Nada, salvo que tú decidas escribirnos por correo.</div>
+    </div>
+  </div>
+
+  <section class="bloque">
+    <h2><span class="num">1</span>Quién es responsable de tus datos</h2>
+    <p>M.A.G.P. — Manejo Autónomo de Gastos Personales ("el Software") es desarrollado y mantenido por Miguel Angel Gutiérrez Vasquez ("el Titular"). Esta política explica qué información maneja el Software, cómo la protege y qué control tienes sobre ella. Para cualquier consulta sobre esta política, puedes escribir a <a href="mailto:magp.contacto@gmail.com">magp.contacto@gmail.com</a>.</p>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">2</span>Qué información maneja la app</h2>
+    <p>El Software organiza la información financiera que tú mismo decides ingresar: tus ingresos y gastos, gastos fijos, metas de ahorro, y, si lo activas, facturas o documentos de soporte que adjuntes. También guarda los datos que defines para proteger tu perfil: tu PIN de acceso, tu pregunta y respuesta de seguridad, y, si la seleccionas, una foto de perfil.</p>
+    <p class="muted">No se te pide ni se recopila ningún otro dato personal (no se te pide tu nombre real, documento de identidad, ni datos de contacto) salvo que tú mismo decidas escribirnos por correo electrónico.</p>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">3</span>Cómo se almacena y protege tu información</h2>
+    <div class="tarjeta">
+      <ul>
+        <li><strong>Todo queda en tu equipo.</strong> La información se guarda en una base de datos local, dentro de una carpeta del sistema oculta al usuario (fuera de la vista normal de archivos), separada del programa que ves e interactúas.</li>
+        <li><strong>Cifrado en reposo.</strong> La base de datos se cifra con SQLCipher, una extensión de cifrado de nivel de archivo para bases de datos SQLite.</li>
+        <li><strong>El PIN nunca se guarda en texto plano.</strong> Se almacena como un hash SHA-256 irreversible; ni siquiera el Titular puede leer tu PIN original a partir de esa información.</li>
+        <li><strong>Bloqueo por seguridad.</strong> Tras varios intentos fallidos de PIN, el acceso a tu perfil se bloquea temporalmente de forma automática, como capa adicional de protección.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">4</span>Qué no hacemos con tu información</h2>
+    <ul class="no-lista">
+      <li>No enviamos, transmitimos ni sincronizamos tu información financiera a ningún servidor propio ni de terceros.</li>
+      <li>No usamos rastreadores de analítica ni publicidad de terceros dentro del Software.</li>
+      <li>No vendemos, alquilamos ni compartimos tu información con nadie.</li>
+      <li>El Titular no tiene acceso remoto a tu base de datos ni a tu información financiera en ningún momento.</li>
+    </ul>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">5</span>Tu control sobre tus datos</h2>
+    <p>Puedes eliminar tu perfil y toda su información en cualquier momento desde la propia app, en "Configurar Cuenta → Eliminar cuenta". Esta acción borra en cascada tu historial y registros financieros, y no se puede deshacer. Como la información vive solo en tu dispositivo, también eres responsable de conservar tus propias copias de seguridad si las necesitas.</p>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">6</span>Restablecimiento de PIN por soporte</h2>
+    <p>Si olvidas tu PIN y agotas los intentos de tu pregunta de seguridad, puedes escribir a <a href="mailto:magp.contacto@gmail.com">magp.contacto@gmail.com</a> solicitando el restablecimiento de tu perfil. Este proceso solo reemplaza tu PIN y pregunta de seguridad por unos valores genéricos temporales, para que puedas volver a entrar y definir los tuyos propios; en ningún momento el Titular visualiza, exporta ni recibe tu información financiera durante este proceso.</p>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">7</span>Futuras funciones de sincronización</h2>
+    <p>El Titular planea, para una versión futura de pago, una función opcional de sincronización por red local o en la nube. Esta función no está disponible en la versión actual del Software. Antes de activarla, esta política se actualizará para describir exactamente qué información se transmitiría y cómo se protegería, y se pedirá tu consentimiento expreso antes de encenderla para tu perfil.</p>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">8</span>Menores de edad</h2>
+    <p>El Software está dirigido a personas mayores de edad para la gestión de sus propias finanzas personales. No está dirigido a menores de edad y no recopila intencionalmente información de menores.</p>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">9</span>Cambios a esta política</h2>
+    <p>El Titular podrá actualizar esta política para reflejar cambios en el Software (por ejemplo, al activar la sincronización descrita en la sección 7). Los cambios sustanciales se anunciarán por los medios disponibles dentro del Software o en los canales de contacto del proyecto antes de entrar en vigencia.</p>
+  </section>
+
+  <footer class="pie">
+    <span>M.A.G.P. — Manejo Autónomo de Gastos Personales</span>
+    <span>Contacto: <a href="mailto:magp.contacto@gmail.com">magp.contacto@gmail.com</a></span>
+  </footer>
+</div>
+</body>
+</html>
