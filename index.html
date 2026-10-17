@@ -246,76 +246,86 @@
 
   <header class="encabezado">
     <span class="etiqueta">Política de Privacidad</span>
-    <h1>Cómo maneja sus datos M.A.G.P.</h1>
+    <h1>Cómo maneja tus datos M.A.G.P.</h1>
     <p class="subtitulo">Manejo Autónomo de Gastos Personales — aplicación de escritorio y móvil desarrollada por Miguel Angel Gutiérrez Vasquez.</p>
-    <p class="meta-fecha">Última actualización: 6 de octubre de 2026</p>
+    <p class="meta-fecha">Última actualización: 15 de octubre de 2026</p>
   </header>
 
   <div class="cuadricula-hechos">
     <div class="hecho">
-      <div class="titulo-hecho">Dónde vive su información</div>
-      <div class="texto-hecho">Únicamente en su propio dispositivo — nunca en un servidor.</div>
+      <div class="titulo-hecho">Dónde vive tu información</div>
+      <div class="texto-hecho">Solo en tus propios dispositivos — nunca en un servidor.</div>
     </div>
     <div class="hecho">
       <div class="titulo-hecho">Cómo se guarda</div>
-      <div class="texto-hecho">Cifrada con SQLCipher, en una carpeta oculta del sistema.</div>
+      <div class="texto-hecho">Protegida en tu equipo y cifrada cuando viaja entre tu PC y tu celular.</div>
     </div>
     <div class="hecho">
       <div class="titulo-hecho">Qué recibimos nosotros</div>
-      <div class="texto-hecho">Nada, salvo que usted decida escribirnos por correo.</div>
+      <div class="texto-hecho">Nada, salvo que tú decidas escribirnos por correo.</div>
     </div>
   </div>
 
   <section class="bloque">
-    <h2><span class="num">1</span>Quién es responsable de sus datos</h2>
-    <p>M.A.G.P. — Manejo Autónomo de Gastos Personales ("el Software") es desarrollado y mantenido por Miguel Angel Gutiérrez Vasquez ("el Titular"). Esta política explica qué información maneja el Software, cómo la protege y qué control tiene usted sobre ella. Para cualquier consulta sobre esta política, puede escribir a <a href="mailto:magp.contacto@gmail.com">magp.contacto@gmail.com</a>.</p>
+    <h2><span class="num">1</span>Quién es responsable de tus datos</h2>
+    <p>M.A.G.P. — Manejo Autónomo de Gastos Personales ("el Software") es desarrollado y mantenido por Miguel Angel Gutiérrez Vasquez ("el Titular"). Esta política explica qué información maneja el Software, cómo la protege y qué control tienes sobre ella. Para cualquier consulta sobre esta política, puedes escribir a <a href="mailto:magp.contacto@gmail.com">magp.contacto@gmail.com</a>.</p>
   </section>
 
   <section class="bloque">
     <h2><span class="num">2</span>Qué información maneja la app</h2>
-    <p>El Software organiza la información financiera que usted mismo decide ingresar: sus ingresos y gastos, gastos fijos, metas de ahorro y, si utiliza las funciones Premium, las facturas o documentos de soporte que adjunte. También guarda los datos que usted define para proteger su perfil: su PIN de acceso, su pregunta y respuesta de seguridad y, si la selecciona, una foto de perfil.</p>
-    <p class="muted">No se le pide ni se recopila ningún otro dato personal (no se le pide su nombre real, documento de identidad, ni datos de contacto) salvo que usted mismo decida escribirnos por correo electrónico.</p>
+    <p>El Software organiza la información financiera que tú mismo decides ingresar: tus ingresos y gastos, gastos fijos (con su frecuencia), metas de ahorro, los créditos que registres (tarjetas, préstamos y equipos en cuotas, con sus saldos, cuotas, tasas, entidades y pagos), los datos de la pestaña Cuentas (cuentas con saldo escrito por ti, conteo de efectivo y cuentas por cobrar) y, si usas las funciones Premium, las facturas o documentos de soporte que adjuntes. También guarda los datos que defines para proteger tu perfil: tu PIN de acceso, tu pregunta y respuesta de seguridad, y, si la seleccionas, una foto de perfil.</p>
+    <p>Todo lo anterior lo escribes tú. M.A.G.P. no se conecta a bancos, entidades financieras ni a ninguna cuenta tuya, y no consulta saldos reales.</p>
+    <p class="muted">No se te pide ni se recopila ningún otro dato personal (no se te pide tu nombre real, documento de identidad, ni datos de contacto) salvo que tú mismo decidas escribirnos por correo electrónico.</p>
   </section>
 
   <section class="bloque">
-    <h2><span class="num">3</span>Cómo se almacena y protege su información</h2>
+    <h2><span class="num">3</span>Cómo se almacena y protege tu información</h2>
     <div class="tarjeta">
       <ul>
-        <li><strong>Todo queda en su equipo.</strong> La información se guarda en una base de datos local, dentro de una carpeta del sistema oculta al usuario (fuera de la vista normal de archivos), separada del programa con el que usted interactúa.</li>
-        <li><strong>Cifrado en reposo.</strong> La base de datos se cifra con SQLCipher, una extensión de cifrado de nivel de archivo para bases de datos SQLite.</li>
-        <li><strong>El PIN nunca se guarda en texto plano.</strong> Se almacena como un hash SHA-256 irreversible; ni siquiera el Titular puede leer su PIN original a partir de esa información.</li>
-        <li><strong>Bloqueo por seguridad.</strong> Tras varios intentos fallidos de PIN, el acceso a su perfil se bloquea temporalmente de forma automática, como capa adicional de protección.</li>
+        <li><strong>Todo queda en tus dispositivos.</strong> La información se guarda en una base de datos local: en el computador, dentro de una carpeta del sistema oculta al usuario; en el celular, dentro del almacenamiento privado de la app, al que Android no deja entrar a las demás aplicaciones.</li>
+        <li><strong>Cifrado en reposo.</strong> En el computador, la base de datos se cifra con SQLCipher, una extensión de cifrado de nivel de archivo para bases de datos SQLite. En el celular, la app guarda además una copia cifrada (AES, mediante Fernet) que se actualiza cada vez que guardas.</li>
+        <li><strong>Extractos en PDF y OCR.</strong> Si usas la lectura de extractos (función Premium), el archivo PDF se lee únicamente en tu propio dispositivo; no se copia ni se guarda dentro de la app y no se envía a ningún lado. Si el PDF está protegido, la contraseña que escribes se usa solo para abrirlo y no se almacena. Para los extractos escaneados, el computador usa el reconocimiento óptico de caracteres Tesseract, que funciona sin internet y también trabaja solo en tu equipo. De cada extracto solo se conservan los valores que tú confirmas al guardar el crédito y los nombres de los datos que le enseñes a la app.</li>
+        <li><strong>El PIN nunca se guarda en texto plano.</strong> Se almacena como un hash SHA-256 irreversible; ni siquiera el Titular puede leer tu PIN original a partir de esa información.</li>
+        <li><strong>Bloqueo por seguridad.</strong> Tras varios intentos fallidos de PIN, el acceso a tu perfil se bloquea temporalmente de forma automática, como capa adicional de protección.</li>
       </ul>
     </div>
   </section>
 
   <section class="bloque">
-    <h2><span class="num">4</span>Qué no hacemos con su información</h2>
+    <h2><span class="num">4</span>Qué no hacemos con tu información</h2>
     <ul class="no-lista">
-      <li>No enviamos, transmitimos ni almacenamos su información financiera en ningún servidor propio ni de terceros. La única transferencia entre dispositivos es la sincronización Premium descrita en la sección 7, que ocurre directamente entre sus propios equipos.</li>
+      <li>No enviamos, transmitimos ni sincronizamos tu información financiera a ningún servidor propio ni de terceros. La única forma en que tu información sale de un dispositivo es la sincronización WiFi entre tu propio computador y tu propio celular, descrita en la sección 7.</li>
       <li>No usamos rastreadores de analítica ni publicidad de terceros dentro del Software.</li>
-      <li>No vendemos, alquilamos ni compartimos su información con nadie.</li>
-      <li>Una vez al día como máximo, la app descarga desde este mismo sitio un archivo público con el valor oficial de la UVT publicado por la DIAN (para la sección de Declaración de Renta). En esa consulta no se envía ningún dato suyo.</li>
-      <li>Las funciones Premium se adquieren mediante la tienda correspondiente (Microsoft Store o Google Play). La app solo consulta a la tienda si usted tiene la licencia activa; el pago lo gestiona completamente la tienda y el Titular no recibe, no almacena ni tiene acceso a sus datos de pago.</li>
-      <li>Las facturas que usted adjunta y los reportes que genera permanecen en su equipo; los reportes se guardan donde usted lo indique y no se envían a ningún lugar.</li>
-      <li>El Titular no tiene acceso remoto a su base de datos ni a su información financiera en ningún momento.</li>
+      <li>No vendemos, alquilamos ni compartimos tu información con nadie.</li>
+      <li>Una vez al día como máximo, la app descarga desde este mismo sitio un archivo público con el valor oficial de la UVT publicado por la DIAN (para la sección de Declaración de Renta). En esa consulta no se envía ningún dato tuyo.</li>
+      <li>El Titular no tiene acceso remoto a tu base de datos ni a tu información financiera en ningún momento.</li>
     </ul>
   </section>
 
   <section class="bloque">
-    <h2><span class="num">5</span>Su control sobre sus datos</h2>
-    <p>Puede eliminar su perfil y toda su información en cualquier momento desde la propia app, en "Configurar Cuenta → Eliminar cuenta". Esta acción borra en cascada su historial y registros financieros, y no se puede deshacer. Como la información vive solo en su dispositivo, usted también es responsable de conservar sus propias copias de seguridad si las necesitas.</p>
+    <h2><span class="num">5</span>Tu control sobre tus datos</h2>
+    <p>Puedes eliminar tu perfil y toda su información en cualquier momento desde la propia app, en "Configurar Cuenta → Eliminar cuenta". Esta acción borra en cascada tu historial y registros financieros, y no se puede deshacer. Como la información vive solo en tu dispositivo, tú decides cómo conservarla: la app incluye un botón de «Respaldo» que guarda un archivo cifrado con toda tu información en la ubicación que tú elijas (por ejemplo, un USB o una carpeta de tu dispositivo) y que puedes restaurar cuando quieras. Ese archivo lo guarda la app solo donde tú indiques: nunca se envía a internet ni al Titular, y su conservación es responsabilidad tuya.</p>
   </section>
 
   <section class="bloque">
     <h2><span class="num">6</span>Restablecimiento de PIN por soporte</h2>
-    <p>Si olvida su PIN y agota los intentos de su pregunta de seguridad, puede escribir a <a href="mailto:magp.contacto@gmail.com">magp.contacto@gmail.com</a> solicitando el restablecimiento de su perfil. Este proceso solo reemplaza su PIN y pregunta de seguridad por unos valores genéricos temporales, para que pueda volver a entrar y definir los suyos propios; en ningún momento el Titular visualiza, exporta ni recibe su información financiera durante este proceso.</p>
+    <p>Si olvidas tu PIN y agotas los intentos de tu pregunta de seguridad, puedes escribir a <a href="mailto:magp.contacto@gmail.com">magp.contacto@gmail.com</a> solicitando el restablecimiento de tu perfil. Este proceso solo reemplaza tu PIN y pregunta de seguridad por unos valores genéricos temporales, para que puedas volver a entrar y definir los tuyos propios; en ningún momento el Titular visualiza, exporta ni recibe tu información financiera durante este proceso.</p>
   </section>
 
   <section class="bloque">
-    <h2><span class="num">7</span>Sincronización entre sus dispositivos (función Premium)</h2>
-    <p>Las funciones Premium incluyen una sincronización opcional entre el computador y la aplicación móvil de M.A.G.P. Esta sincronización viaja directamente entre sus dos equipos, por su red WiFi local, de forma cifrada, sin pasar por internet ni por ningún servidor del Titular o de terceros. Para emparejarlos, el computador muestra una dirección IP y un código de un solo uso con vigencia de 10 minutos que usted escribe en el celular; mientras M.A.G.P. está abierto en el computador, este escucha en su red local para que el celular emparejado pueda encontrarlo.</p>
-    <p class="muted">Actualmente no existe sincronización por internet (en la nube). Si el Titular la incorpora en el futuro, esta política se actualizará antes para describir exactamente qué información se transmitiría y cómo se protegería, y se le pedirá su consentimiento expreso antes de activarla para su perfil.</p>
+    <h2><span class="num">7</span>Sincronización WiFi entre tu computador y tu celular</h2>
+    <p>La versión 1.1 incluye, como función Premium, la sincronización entre tu computador y tu celular por tu propia red WiFi. Así funciona:</p>
+    <div class="tarjeta">
+      <ul>
+        <li><strong>Solo si tú la activas.</strong> Nada se sincroniza hasta que emparejas tus dispositivos: el computador muestra un código temporal (válido 10 minutos y de un solo uso), junto con un código QR que contiene ese mismo código y la dirección de tu computador en tu red local; tú lo escribes en el celular o lo abres con la cámara normal de tu teléfono. M.A.G.P. no usa la cámara ni te pide ese permiso, y el celular siempre te pide confirmar antes de conectarse.</li>
+        <li><strong>Directo entre tus dispositivos.</strong> La información viaja del celular al computador y viceversa dentro de tu red local, sin pasar por internet ni por ningún servidor del Titular o de terceros.</li>
+        <li><strong>Cifrada.</strong> Todo lo que se intercambia va cifrado con una clave propia de cada pareja computador–celular, generada al emparejarlos.</li>
+        <li><strong>Qué se intercambia.</strong> Los datos de los perfiles que sincronizas: registros financieros, gastos fijos, metas, cierres de periodo, créditos y sus pagos, datos de la pestaña Cuentas, datos de Declaración de Renta, facturas adjuntas, foto de perfil, tu pregunta y respuesta de seguridad, y el PIN en su forma de hash (nunca el PIN en texto plano).</li>
+        <li><strong>Cuándo.</strong> Mientras la app está abierta, el computador escucha en tu red local (puerto 51820) para que tu celular emparejado lo encuentre; el celular sincroniza al abrir la app, al volver a ella o cuando tocas el botón de sincronizar en cualquiera de los dos. Para que el celular encuentre al computador, envía en tu red local un mensaje de búsqueda que no contiene ningún dato tuyo.</li>
+        <li><strong>Estado Premium.</strong> Al sincronizar, el computador le indica al celular si tiene la licencia Premium activa, para habilitar en el celular las mismas funciones.</li>
+      </ul>
+    </div>
+    <p class="muted">La sincronización funciona únicamente por tu red WiFi local. M.A.G.P. no ofrece sincronización por internet ni en la nube, y no está previsto ofrecerla.</p>
   </section>
 
   <section class="bloque">
@@ -325,7 +335,12 @@
 
   <section class="bloque">
     <h2><span class="num">9</span>Cambios a esta política</h2>
-    <p>El Titular podrá actualizar esta política para reflejar cambios en el Software (por ejemplo, al incorporar una sincronización por internet, como se indica en la sección 7). Los cambios sustanciales se anunciarán por los medios disponibles dentro del Software o en los canales de contacto del proyecto antes de entrar en vigencia.</p>
+    <p>El Titular podrá actualizar esta política para reflejar cambios en el Software (por ejemplo, si se agrega publicidad en la app móvil). Los cambios sustanciales se anunciarán por los medios disponibles dentro del Software o en los canales de contacto del proyecto antes de entrar en vigencia.</p>
+  </section>
+
+  <section class="bloque">
+    <h2><span class="num">10</span>Componentes de terceros</h2>
+    <p>El Software incluye componentes de código abierto que funcionan dentro de tu propio dispositivo y no envían información a internet: Tesseract OCR (licencia Apache 2.0), para leer extractos escaneados en el computador, y segno (licencia BSD de 3 cláusulas), para dibujar el código QR de emparejamiento. Sus textos de licencia se entregan junto con la aplicación.</p>
   </section>
 
   <footer class="pie">
